@@ -42,4 +42,18 @@ extension UIView{
         self.layer.add(anima, forKey: "xx")
         //        view.layer.removeAnimation(forKey: "xx")
     }
+    func moveAlongAngleWithAnimate() {
+        let startPoint=CGPoint(x:50,y: 300)//自定义
+        let endPoint=CGPoint(x:300, y:300)//自定义
+        let controlPoint1=CGPoint(x:120,y: 180)//自定义
+        let controlPoint2=CGPoint(x:220,y: 420)//自定义
+        let path=UIBezierPath()
+        path.move(to: startPoint)
+        path.addCurve(to: endPoint, controlPoint1: controlPoint1, controlPoint2: controlPoint2)
+        let animation = CAKeyframeAnimation()
+        animation.duration=1
+        animation.path = path.cgPath
+        animation.timingFunction = CAMediaTimingFunction(name: "easeOut")
+        self.layer.add(animation, forKey: "position")
+    }
 }
