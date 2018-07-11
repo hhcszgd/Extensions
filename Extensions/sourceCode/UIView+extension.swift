@@ -56,4 +56,57 @@ extension UIView{
         animation.timingFunction = CAMediaTimingFunction(name: "easeOut")
         self.layer.add(animation, forKey: "position")
     }
+    func scaleAnimate() {
+        //缩放动画
+        let animation = CAKeyframeAnimation(keyPath: "transform.scale")
+        animation.values = [1.0,0.5,1.5,1.0];
+        animation.duration = 2
+        animation.repeatCount = 3
+        self.layer.add(animation, forKey: "")
+    }
+    
+    func opacityAnimation()  {
+        //透明度动画
+        let animation = CABasicAnimation(keyPath: "opacity")
+        animation.fromValue = 1
+        animation.toValue = 0
+        animation.beginTime = 0
+        animation.repeatCount = 1
+        //保持动画执行完的状态
+        animation.isRemovedOnCompletion = false
+        animation.fillMode = kCAFillModeForwards
+        animation.duration = 2
+        self.layer.add(animation, forKey: "")
+    }
+    func animationGroup() {
+        //透明度
+        let opacityAnimation = CABasicAnimation(keyPath: "opacity")
+        opacityAnimation.fromValue = 1
+        opacityAnimation.toValue = 0
+        //缩放
+        let scaleAnimate = CAKeyframeAnimation(keyPath: "transform.scale")
+        scaleAnimate.values = [1.0,0.5,1.5,1.0];
+        //移动
+        let startPoint=CGPoint(x:50,y: 300)
+        let endPoint=CGPoint(x:300, y:300)
+        let controlPoint1=CGPoint(x:120,y: 180)
+        let controlPoint2=CGPoint(x:220,y: 420)
+        let path=UIBezierPath()
+        path.move(to: startPoint)
+        path.addCurve(to: endPoint, controlPoint1: controlPoint1, controlPoint2: controlPoint2)
+        let moveAnimation = CAKeyframeAnimation(keyPath: "position")
+        moveAnimation.path = path.cgPath
+        //        moveAnimation.timingFunction = CAMediaTimingFunction(name: "easeOut")
+        //组
+        let groupAnimation = CAAnimationGroup()
+        groupAnimation.repeatCount = 1
+        groupAnimation.duration = 2
+        //保持动画执行完的状态
+        groupAnimation.isRemovedOnCompletion = false
+        groupAnimation.fillMode = kCAFillModeForwards
+        
+        groupAnimation.animations = [ moveAnimation , opacityAnimation , scaleAnimate]
+//        self.layer.anchorPoint = CGPoint(x: 0, y: 0.5)
+        self.layer.add(groupAnimation, forKey: "")
+    }
 }
