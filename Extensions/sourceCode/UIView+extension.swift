@@ -109,4 +109,19 @@ extension UIView{
 //        self.layer.anchorPoint = CGPoint(x: 0, y: 0.5)
         self.layer.add(groupAnimation, forKey: "")
     }
+    func transitionAnimate()  {
+        // 1.创建核心动画
+        let ca = CATransition()
+        // 1.1动画过渡类型
+        ca.type = "cube";
+        // 1.2动画过渡方向
+        ca.subtype =  kCATransitionFromRight
+        // 1.3动画起点(在整体动画的百分比)
+        //    ca.startProgress = 0.5;
+        ca.endProgress = 0.5;
+        // 动画时间
+        ca.duration = 1;
+        // 2.添加核心动画
+        self.layer.add(ca , forKey: nil )
+    }
 }
