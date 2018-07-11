@@ -35,4 +35,11 @@ extension UIView{
         self.layer.cornerRadius = redius
         self.layer.masksToBounds = true
     }
+    func shake()  {
+        let anima : CAKeyframeAnimation  =  CAKeyframeAnimation(keyPath: "transform.rotation")
+        anima.values = [-Double.pi/180*4 , Double.pi/180*4 ,-Double.pi/180*4 ]
+        anima.repeatCount = MAXFLOAT;
+        self.layer.add(anima, forKey: "xx")
+        //        view.layer.removeAnimation(forKey: "xx")
+    }
 }
