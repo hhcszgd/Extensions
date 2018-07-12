@@ -123,5 +123,20 @@ extension UIView{
         ca.duration = 1;
         // 2.添加核心动画
         self.layer.add(ca , forKey: nil )
+        /*
+        type的值                     解读      对应常量
+        fade                        淡入淡出   kCATransitionFade
+        push                        推挤      kCATransitionPush
+        reveal                      揭开      kCATransitionReveal
+        moveIn                      覆盖      kCATransitionMoveIn
+        cube                        立方体    私有API
+        suckEffect                  吮吸      私有API
+        oglFlip                     翻转      私有API
+        rippleEffect                波纹      私有API
+        pageCurl                    反翻页    私有API
+        cameraIrisHollowOpen        开镜头    私有API
+        cameraIrisHollowClose       关镜头    私有API
+        
+        */
     }
 }
