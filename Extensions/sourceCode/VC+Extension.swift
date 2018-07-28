@@ -19,4 +19,12 @@ extension UIViewController {
             objc_setAssociatedObject(self, &UIViewController.userInfo, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
+    
+    func alert(title:String = "提示",detailTitle:String? = nil ,style :UIAlertControllerStyle = UIAlertControllerStyle.alert ,actions:[UIAlertAction] ){
+        let actionVC = UIAlertController.init(title: title, message:detailTitle, preferredStyle: style)
+        for action in actions{
+            actionVC.addAction(action)
+        }
+        self.present(actionVC, animated: true, completion: nil)
+    }
 }
