@@ -27,4 +27,14 @@ extension UIViewController {
         }
         self.present(actionVC, animated: true, completion: nil)
     }
+    func openSetting(){
+        DispatchQueue.main.async {
+            let url : URL = URL(string: UIApplicationOpenSettingsURLString)!
+            if UIApplication.shared.canOpenURL(url ) {
+                UIApplication.shared.open(url, options: [String : Any](), completionHandler: { (bool ) in
+                    
+                })
+            }
+        }
+    }
 }
