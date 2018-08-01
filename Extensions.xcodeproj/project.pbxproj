@@ -19,6 +19,7 @@
 		152F7E5A20F4860A009C5C59 /* UINavigationController+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152F7E5920F4860A009C5C59 /* UINavigationController+extention.swift */; };
 		152F7E5C20F48670009C5C59 /* UIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152F7E5B20F48670009C5C59 /* UIImage+extension.swift */; };
 		152F7E5E20F486D1009C5C59 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152F7E5D20F486D1009C5C59 /* String+extension.swift */; };
+		15527D3421114FD60082488B /* DDAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15527D3321114FD60082488B /* DDAlertController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		152F7E5920F4860A009C5C59 /* UINavigationController+extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+extention.swift"; sourceTree = "<group>"; };
 		152F7E5B20F48670009C5C59 /* UIImage+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+extension.swift"; sourceTree = "<group>"; };
 		152F7E5D20F486D1009C5C59 /* String+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
+		15527D3321114FD60082488B /* DDAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDAlertController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				152F7E5520F485AB009C5C59 /* VC+Extension.swift */,
 				152F7E5120F48589009C5C59 /* Color+extension.swift */,
 				152F7E5220F48589009C5C59 /* UIView+extension.swift */,
+				15527D3321114FD60082488B /* DDAlertController.swift */,
 			);
 			path = sourceCode;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			files = (
 				152F7E4120F48541009C5C59 /* ViewController.swift in Sources */,
 				152F7E5A20F4860A009C5C59 /* UINavigationController+extention.swift in Sources */,
+				15527D3421114FD60082488B /* DDAlertController.swift in Sources */,
 				152F7E5620F485AB009C5C59 /* VC+Extension.swift in Sources */,
 				152F7E5C20F48670009C5C59 /* UIImage+extension.swift in Sources */,
 				152F7E5820F485EE009C5C59 /* AppDelegate+extension.swift in Sources */,
