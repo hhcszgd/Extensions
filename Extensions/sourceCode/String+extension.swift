@@ -11,6 +11,20 @@ import UIKit
 
 
 extension String {
+    ///insert string in currentString
+    ///
+    /// "1234567".insertSplit(string: "oo", perDistance: 3) -> "123oo456oo7"
+    func insertSplit(string:String , perDistance:Int) -> String {
+        if perDistance <= 0{return self}
+        let groupcount = self.count / perDistance
+        let left = self.count % perDistance
+        let totalCount = groupcount + (left > 0 ? 1 : 0)
+        var bankCardNumberString = self
+        for index   in 0..<(totalCount - 1) {
+            bankCardNumberString.insert(contentsOf:string, at: bankCardNumberString.index(bankCardNumberString.startIndex, offsetBy: (index + 1) * perDistance + index * string.count))
+        }
+        return bankCardNumberString
+    }
     ///判断用户名是否合法
     func userNameLawful() -> Bool {
         let name  = "^[\\u4e00-\\u9fa5]{2,80}$"

@@ -32,4 +32,11 @@ extension UIImage {
         UIGraphicsEndImageContext()
         return imageRet
     }
+    
+    func imageConvertToAttributedString(bounds:CGRect? = nil )->NSAttributedString{
+        let achment : NSTextAttachment = NSTextAttachment.init()
+        achment.image = self
+        if bounds != nil {achment.bounds = bounds!}
+        return NSAttributedString.init(attachment: achment)
+    }
 }
