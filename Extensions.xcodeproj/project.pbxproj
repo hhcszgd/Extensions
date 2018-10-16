@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1509708A2175C4510041579E /* DDRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150970892175C4510041579E /* DDRowView.swift */; };
 		152F7E3F20F48541009C5C59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152F7E3E20F48541009C5C59 /* AppDelegate.swift */; };
 		152F7E4120F48541009C5C59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152F7E4020F48541009C5C59 /* ViewController.swift */; };
 		152F7E4420F48541009C5C59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 152F7E4220F48541009C5C59 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		150970892175C4510041579E /* DDRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDRowView.swift; sourceTree = "<group>"; };
 		152F7E3B20F48541009C5C59 /* Extensions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Extensions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		152F7E3E20F48541009C5C59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		152F7E4020F48541009C5C59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			children = (
 				152F7E5020F4857B009C5C59 /* sourceCode */,
 				152F7E3E20F48541009C5C59 /* AppDelegate.swift */,
+				150970892175C4510041579E /* DDRowView.swift */,
 				152F7E4020F48541009C5C59 /* ViewController.swift */,
 				152F7E4220F48541009C5C59 /* Main.storyboard */,
 				152F7E4520F48542009C5C59 /* Assets.xcassets */,
@@ -168,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				152F7E4120F48541009C5C59 /* ViewController.swift in Sources */,
+				1509708A2175C4510041579E /* DDRowView.swift in Sources */,
 				152F7E5A20F4860A009C5C59 /* UINavigationController+extention.swift in Sources */,
 				15527D3421114FD60082488B /* DDAlertController.swift in Sources */,
 				152F7E5620F485AB009C5C59 /* VC+Extension.swift in Sources */,
