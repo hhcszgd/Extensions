@@ -12,6 +12,13 @@ extension UIView{
         case horizontal
         case vertical
     }
+    func setSpecifyCornerRound(byRoundingCorners:UIRectCorner,cornerRadius:CGFloat)  {
+        let maskPath = UIBezierPath.init(roundedRect: self.bounds, byRoundingCorners: [UIRectCorner.topLeft,UIRectCorner.topRight], cornerRadii: CGSize(width: cornerRadius, height: cornerRadius))
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = maskPath.cgPath
+        maskLayer.frame = self.bounds
+        self.layer.mask = maskLayer
+    }
     func backgroundColors(_ direction :DDColorDirection = .horizontal , colors : [UIColor]){
         let colorlayer: CAGradientLayer = CAGradientLayer()
         if direction == .horizontal {
